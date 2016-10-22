@@ -56,14 +56,16 @@ public class DistanceFinder {
         if(time.contains("M")){
             if(time.contains("H")){
                 minutes = time.substring(time.indexOf("H") + 1, time.indexOf("M"));
+            } else {
+                minutes = time.substring(0, time.indexOf("M"));
             }
-            minutes = time.substring(0, time.indexOf("M"));
         }
         if(time.contains("S")){
             if(time.contains("M")){
                 seconds = time.substring(time.indexOf("M") + 1, time.indexOf("S"));
+            } else {
+                seconds = time.substring(0, time.indexOf("S"));
             }
-            seconds = time.substring(0, time.indexOf("S"));
         }
 
         int total = Integer.valueOf(seconds) + (60 * Integer.valueOf(minutes)) + (3600 * Integer.valueOf(hours));
