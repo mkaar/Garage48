@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot --inline --config webpack.config.dev.babel.js --history-api-fallback",
+    "dev": "webpack-dev-server --hot --inline --config webpack.config.dev.babel.js --history-api-fallback --host 172.19.22.234",
     "build": "webpack --config webpack.config.production.babel.js",
     "lint": "eslint ."
   },
