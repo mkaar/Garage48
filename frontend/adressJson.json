@@ -1,0 +1,48 @@
+{
+	"adress":"Vana-Viru tn 4",
+	"xcord": "59.4368535600592",
+	"ycord": "24.750452803014",
+	"accidents":[
+		{
+		"xcord":"59.4362598870861",
+		"ycord":"24.7419049942222",
+		"damage":"792",
+		"date":"1442966400000",
+		"description":"Liiklusõnnetused teel ja ristmikul: Muud: Tagurpidi liikuja, v.a parkija, kokkupõrge teise sõidukiga",
+		"distance": "5km"
+		},
+		{
+		"xcord":"59.4362598870861",
+		"ycord":"24.7419049942222",
+		"damage":"2300",
+		"date":"1429315200000",
+		"description":"Liiklusõnnetused teel ja ristmikul: Muud: Tagurpidi liikuja, v.a parkija, kokkupõrge teise sõidukiga",
+		"distance": "5km"
+		},	
+		{
+		"xcord":"59.4368535600592",
+		"ycord":"24.750452803014",
+		"damage":"1500",
+		"date":"1430438400000",
+		"description":"Parkimisega seotud liiklusõnnetused: Mööduva sõiduki otsasõit pargitud sõidukile",
+		"distance": "5km"
+		}
+	],
+	"schools":[
+		{
+		"xcord":"59.435312",
+		"ycord":"24.766334",
+		"adress":"Raua 6",
+		"language":"eesti",
+		"distance":"3km",
+		"rank":"9"
+		}
+	],
+	"busstops":[
+		{
+		"xcord":"59.430448",
+		"ycord":"24.771690",
+		"stopname":"keskturg"
+		}
+	]
+}
