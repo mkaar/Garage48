@@ -15,6 +15,7 @@ export default {
 				query: {
 					presets: ['react', 'es2015', 'stage-1'],
 				},
+				exclude: [/node_modules/],
 			},
 			{
 				test: /\.less$/,
@@ -28,6 +29,7 @@ export default {
 			},
 		],
 	},
+
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
