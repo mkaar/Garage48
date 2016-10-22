@@ -19,7 +19,7 @@ export default class Home extends Component {
 					<div className="headerLogo">
 						<Isvg src="/Locata-logo.svg" />
 					</div>
-					<div className="popup input">
+					<div className="popup hide input">
 						<form
 							className="formContent"
 							id="form"
