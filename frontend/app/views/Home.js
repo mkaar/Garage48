@@ -32,19 +32,22 @@ export default class Home extends Component {
 								onChange={this.handleChange.bind(this)}
 							/>
 						</form>
-						<ul className="autocomplete-result">
+						<ul className="autocomplete-results">
 							<li>Tallinn, Veerenni 2</li>
 							<li>Tallinn, Veerenni 21</li>
 							<li>Tallinn, Veerenni 22</li>
 							<li>Tallinn, Veerenni 23</li>
 						</ul>
-						<ul className="data-result">
+						<ul className="data-results">
 							<li className="p20" >Air quality</li>
 							<li className="p40" >Nearest school</li>
 							<li className="p70" >Nearest bus stop</li>
 							<li className="p60" >Traffic safety</li>
 							<li className="p100" >Average wage</li>
 						</ul>
+						<div className="pointer-tail">
+							<Isvg src="/pointer-tail.svg" />
+						</div>
 					</div>
 					<div className="map">
 						{ this.renderMap(this.state) }
