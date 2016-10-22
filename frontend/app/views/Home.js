@@ -19,27 +19,31 @@ export default class Home extends Component {
 					<div className="headerLogo">
 						<Isvg src="/Locata-logo.svg" />
 					</div>
-					<div className="text">
-					</div>
-					<form
-						className="formContent"
-						id="form"
-						onSubmit={this.handleSubmit.bind(this)}
-					>
-						<input
-							className="input"
-							placeholder="Ex. Viru 1 Tallinn"
-							value={this.state.value}
-							onChange={this.handleChange.bind(this)}
-						/>
-					</form>
-					<div className="popup">
-						<ul>
-							<li>Air quality</li>
-							<li>Nearest school</li>
-							<li>Nearest bus stop</li>
-							<li>Traffic safety</li>
-							<li>Average wage</li>
+					<div className="popup input">
+						<form
+							className="formContent"
+							id="form"
+							onSubmit={this.handleSubmit.bind(this)}
+						>
+							<input
+								className="input"
+								placeholder="Ex. Viru 1 Tallinn"
+								value={this.state.value}
+								onChange={this.handleChange.bind(this)}
+							/>
+						</form>
+						<ul className="autocomplete-result">
+							<li>Tallinn, Veerenni 2</li>
+							<li>Tallinn, Veerenni 21</li>
+							<li>Tallinn, Veerenni 22</li>
+							<li>Tallinn, Veerenni 23</li>
+						</ul>
+						<ul className="data-result">
+							<li className="p20" >Air quality</li>
+							<li className="p40" >Nearest school</li>
+							<li className="p70" >Nearest bus stop</li>
+							<li className="p60" >Traffic safety</li>
+							<li className="p100" >Average wage</li>
 						</ul>
 					</div>
 					<div className="map">

@@ -38,11 +38,12 @@ body {
 .popup {
 	background: #fff;
 	width: 440px;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	border-radius: 22px;
-	box-shadow: 0 3px 10px rgba(0,0,0,.2);
+	height: 50px;
+	position: relative;
+	margin: 0 auto;
+	z-index: 2000;
+	border-radius: 25px;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 	ul {
 		list-style: none;
 		margin: 0;
@@ -108,5 +109,14 @@ body {
 	li:after {
 		width: 0;
 		background: #fff;
+	}
+}
+
+.popup.input {
+	.autocomplete-results,
+	.data-results {
+		opacity: 0;
+		position: absolute;
+		z-index: 0;
 	}
 }
