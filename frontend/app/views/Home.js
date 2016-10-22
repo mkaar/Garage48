@@ -28,7 +28,7 @@ export default class Home extends Component {
 					>
 						<input
 							className="input"
-							placeholder="Ex. Viru 1 Tallinn"
+							placeholder="Type in an address..."
 							value={this.state.value}
 							onChange={this.handleChange.bind(this)}
 						/>
@@ -56,7 +56,7 @@ export default class Home extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
-		this.setState({ lat: -34.397 , lng: 150.644 });
+		this.setState({ lat: json.xcord , lng: json.ycord });
 	}
 
 	renderMap(state) {
@@ -69,7 +69,7 @@ export default class Home extends Component {
 
 	init(state) {
 		var mapOptions = {
-			zoom: 14,
+			zoom: 13,
 			disableDefaultUI: true,
 			scrollwheel: false,
 			navigationControl: false,
