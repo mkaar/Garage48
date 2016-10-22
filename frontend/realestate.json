@@ -1,0 +1,116 @@
+{
+	"area1":
+	{
+		"minArea":"30",
+		"maxArea":"40.99",
+		"changePercent": "0",
+		"years":
+		[
+			{
+				"year":"2006",
+				"avgPricePerm": "1943.52",
+				"avgPrice":"69419.39"
+			},
+			{
+				"year":"2009",
+				"avgPricePerm":"1185.05",
+				"avgPrice":"42489.52"
+			},
+			{
+				"year":"2012",
+				"avgPricePerm":"1458.59",
+				"avgPrice":"52795.43"
+			},
+			{
+				"year":"2015",
+				"avgPricePerm":"1859.88",
+				"avgPrice":"67068.81"
+			}
+
+		]
+	},
+	"area2":
+		{
+		"minArea":"41",
+		"maxArea":"54.99",
+		"changePercent": "0",
+		"years":[
+			{
+				"year":"2006",
+				"avgPricePerm": "1907.85",
+				"avgPrice":"93360"
+			},
+			{
+				"year":"2009",
+				"avgPricePerm":"1305.4",
+				"avgPrice":"63397.89"
+			},
+			{
+				"year":"2012",
+				"avgPricePerm":"1630.03",
+				"avgPrice":"78908.16"
+			},
+			{
+				"year":"2015",
+				"avgPricePerm":"2057.01",
+				"avgPrice":"100757.35"
+			}
+		]
+	},
+	"area3":		
+	{
+		"minArea":"55",
+		"maxArea":"69.99",
+		"changePercent": "0",
+		"years":[
+			{
+				"year":"2006",
+				"avgPricePerm": "1846.46",
+				"avgPrice":"114126,8"
+			},
+			{
+				"year":"2009",
+				"avgPricePerm":"1238.97",
+				"avgPrice":"76945.38"
+			},
+			{
+				"year":"2012",
+				"avgPricePerm":"1616.88",
+				"avgPrice":"100611"
+			},
+			{
+				"year":"2015",
+				"avgPricePerm":"2079.41",
+				"avgPrice":"129106.74"
+			}
+		]
+	},
+	"area4":
+	{
+		"minArea":"70",
+		"maxArea":"249.99",
+		"changePercent": "0",
+		"years":[
+			{
+				"year":"2006",
+				"avgPricePerm": "1793.99",
+				"avgPrice":"169054.48"
+			},
+			{
+				"year":"2009",
+				"avgPricePerm":"1291.63",
+				"avgPrice":"130247.5"
+			},
+			{
+				"year":"2012",
+				"avgPricePerm":"1624.49",
+				"avgPrice":"161474.08"
+			},
+			{
+				"year":"2015",
+				"avgPricePerm":"2179.38",
+				"avgPrice":"224954.93"
+			}
+		]
+	}
+}
