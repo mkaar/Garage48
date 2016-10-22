@@ -14,22 +14,13 @@ export default class Home extends Component {
 						<Isvg src="/Locata-logo.svg" />
 					</div>
 					<div className="text">
-						<p>
-							Text1
-						</p>
-						<p>
-							Text2
-						</p>
-						<p>
-							Text3
-						</p>
 					</div>
 					<div className="formContent">
-						<input className="input" placeholder="Ex. Viru 1 Tallinn" />
+						<input className="input" placeholder="Type in an address..." />
 					</div>
-					<div className="map">
-						{ this.renderMap() }
-					</div>
+				</div>
+				<div className="map">
+					{ this.renderMap() }
 				</div>
 			</div>
 		);
@@ -52,7 +43,7 @@ export default class Home extends Component {
 			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 			var mapOptions = {
 				// How zoomed in you want the map to start at (always required)
-				zoom: 15,
+				zoom: 13,
 				disableDefaultUI: true,
 				scrollwheel: false,
 				navigationControl: false,
