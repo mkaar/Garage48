@@ -1,4 +1,4 @@
-package ee.mkaar;
+package ee.mkaar.garage48;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -6,6 +6,9 @@ import org.springframework.web.client.RestTemplate;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Created by marko on 22/10/16.
+ */
 public class DistanceFinder {
 
     public static Map<String, String> getDurationAndDistance(String xStart, String yStart, String xEnd, String yEnd){
