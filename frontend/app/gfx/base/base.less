@@ -18,6 +18,7 @@ body {
 }
 
 #map {
+	background-color: #00d239;
 	height: 100vh;
 	width: 100vw
 }
@@ -32,4 +33,80 @@ body {
 	background: -moz-linear-gradient(top,  rgb(0, 210, 57) 0%, rgb(0, 210, 57) 51%, rgba(0, 210, 57, 0) 100%);
 	background: -webkit-linear-gradient(top,  rgb(0, 210, 57) 0%,rgb(0, 210, 57) 51%, rgba(0, 210, 57, 0) 100%);
 	background: linear-gradient(to bottom,  rgb(0, 210, 57) 0%,rgb(0, 210, 57) 51%,rgba(0, 210, 57, 0) 100%);
+}
+
+.popup {
+	background: #fff;
+	width: 440px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 22px;
+	box-shadow: 0 3px 10px rgba(0,0,0,.2);
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 15px 0;
+	}
+	li {
+		position: relative;
+		text-align: left;
+		padding: 8px 25px;
+	}
+	li:after {
+		content: "";
+		position: absolute;
+		height: 10px;
+		width: 0;
+		background: #fff;
+		top: 14px;
+		left: 150px;
+		transition: .8s ease;
+	}
+	li.p100:after {
+		background: #00d239;
+		width: calc(100 * 2.5px)
+	}
+	li.p90:after {
+		background: #4ed942;
+		width: calc(90 * 2.5px)
+	}
+	li.p80:after {
+		background: #87d92e;
+		width: calc(80 * 2.5px)
+	}
+	li.p70:after {
+		background: #bfda1a;
+		width: calc(70 * 2.5px)
+	}
+	li.p60:after {
+		background: #f7da06;
+		width: calc(60 * 2.5px)
+	}
+	li.p50:after {
+		background: #f4aa0b;
+		width: calc(50 * 2.5px)
+	}
+	li.p40:after {
+		background: #f2790f;
+		width: calc(40 * 2.5px)
+	}
+	li.p30:after {
+		background: #f04914;
+		width: calc(30 * 2.5px)
+	}
+	li.p20:after {
+		background: #ed1818;
+		width: calc(20 * 2.5px)
+	}
+	li.p10:after {
+		background: #ed1818;
+		width: calc(10 * 2.5px)
+	}
+}
+.popup.hide {
+	li:after {
+		width: 0;
+		background: #fff;
+	}
 }

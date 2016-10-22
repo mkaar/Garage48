@@ -18,6 +18,15 @@ export default class Home extends Component {
 					<div className="formContent">
 						<input className="input" placeholder="Type in an address..." />
 					</div>
+					<div className="popup">
+						<ul>
+							<li>Air quality</li>
+							<li>Nearest school</li>
+							<li>Nearest bus stop</li>
+							<li>Traffic safety</li>
+							<li>Average wage</li>
+						</ul>
+					</div>
 				</div>
 				<div className="map">
 					{ this.renderMap() }
