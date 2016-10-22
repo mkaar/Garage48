@@ -30,6 +30,8 @@ export default class Home extends Component {
 					<div className="headerLogo">
 						<Isvg src="/Locata-logo.svg" />
 					</div>
+					<p id="wanna-go"><a href="#">Wanna go again?</a></p>
+					<p className="text">We turn location based data to valuable information for everyone!</p>
 					<div className={ this.renderClassName() }>
 						<form
 							className="formContent"
@@ -47,12 +49,14 @@ export default class Home extends Component {
 							<li onClick={this.handleSubmit.bind(this, 'Tallinn, Veerenni 21')}>Tallinn, Veerenni 21</li>
 							<li onClick={this.handleSubmit.bind(this, 'Tallinn, Veerenni 22')}>Tallinn, Veerenni 22</li>
 							<li onClick={this.handleSubmit.bind(this, 'Tallinn, Veerenni 23')}>Tallinn, Veerenni 23</li>
+							<li onClick={this.handleSubmit.bind(this, 'Tallinn, Veerenni 23')}>Tallinn, Veerenni 23</li>
 						</ul>
+						<p id="name">{this.state.name}</p>
 						<ul className="data-results">
-							{/*<li> {this.state.name}</li>*/}
 							<li className="p20" >Air quality</li>
 							<li className="p40" >Nearest school</li>
-							<li className="p70" >Nearest bus stop</li>
+							<li className="p70" >Nearest kindergarden</li>
+							<li className="p90" >Nearest bus stop</li>
 							<li className="p60" >Traffic safety</li>
 							<li className="p100" >Average wage</li>
 						</ul>
@@ -79,8 +83,8 @@ export default class Home extends Component {
 		//console.log(name);
 		this.setState({ lat: json.xcord, lng: json.ycord, stage: 2, name: name });
 
-		this.init.bind(this, this.state);
-		setTimeout(() => { this.setState({ stage: 3 }) }, 1000);
+		this.init.bind(this, this.state)
+		setTimeout(() => { this.setState({ stage: 3 }) }, 1200);
 
 	}
 
