@@ -169,7 +169,7 @@ export default class Home extends Component {
 								<span className="price">
 									50€ a month
 								</span>
-								<span class="footer">
+								<span className="footer">
 									Contact us!
 								</span>
 							</span>
@@ -189,7 +189,7 @@ export default class Home extends Component {
 								<span className="price">
 									50€ a month
 								</span>
-								<span class="footer">
+								<span className="footer">
 									Contact us!
 								</span>
 							</span>
@@ -210,7 +210,7 @@ export default class Home extends Component {
 								<span className="price">
 									50€ a month
 								</span>
-								<span class="footer">
+								<span className="footer">
 									Contact us!
 								</span>
 							</span>

@@ -97,6 +97,7 @@ body {
 		width: 0;
 		background: #fff;
 		top: 10px;
+		border-radius: 5px;
 		left: 150px;
 		transition: .8s ease-in-out;
 	}
@@ -196,10 +197,16 @@ body {
 		height: 10px;
 		width: 0;
 		top: 10px;
+		border-radius: 5px;
 		left: 150px;
 		transition: .8s ease-in-out;
 		background: #eee;
 		width: calc(100 * 2.5px)
+	}
+	li:hover {
+		.slider-container-component {
+			opacity: 1;
+		}
 	}
 }
 
@@ -376,7 +383,11 @@ body {
 }
 
 .slider-container-component {
-	position: relative;
+	width: 275px;
+	position: absolute;
+	right: -2px;
+	top: 3px;
+	opacity: 0;
 	@white: #ffffff;
 	@darkestgrey: #464646;
 	@darkergrey: #929292;
