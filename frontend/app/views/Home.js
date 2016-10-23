@@ -82,6 +82,42 @@ export default class Home extends Component {
 		score: 5,
 	};
 
+	jsonDemo5 = {
+		name: 'Tallinn, Kullassepa tn 4',
+		xcord:"24.7440453340727",
+		ycord:"59.4365854277837",
+		air: 8,
+		school: 8,
+		kindergarten: 3,
+		bus: 6,
+		safety: 9,
+		score: 7,
+	};
+
+	jsonDemo6 = {
+		name: "Tallinn, Tehnika tn 57a",
+		xcord:"24.7257701501235",
+		ycord:"59.4297695566297",
+		air: 8,
+		school: 6,
+		kindergarten: 6,
+		bus: 9,
+		safety: 9,
+		score: 6,
+	};
+
+	jsonDemo7 = {
+		name: "Tallinn, Loode tn 14",
+		xcord:"24.7253099565622",
+		ycord:"59.4327593875511",
+		air: 7,
+		school: 7,
+		kindergarten: 5,
+		bus: 7,
+		safety: 7,
+		score: 5,
+	};
+
 	listener = google.maps.event.addDomListener(window, 'load', this.init.bind(this));
 	listener1 = google.maps.event.addDomListener(window, 'submit', (event) => {event.preventDefault()});
 
@@ -114,9 +150,9 @@ export default class Home extends Component {
 							<li onClick={this.handleSubmit.bind(this, this.jsonDemo2)}>{ this.jsonDemo2.name }</li>
 							<li onClick={this.handleSubmit.bind(this, this.jsonDemo3)}>{ this.jsonDemo3.name }</li>
 							<li onClick={this.handleSubmit.bind(this, this.jsonDemo4)}>{ this.jsonDemo4.name }</li>
-							<li onClick={this.handleSubmit.bind(this, this.jsonDemo2)}>{ this.jsonDemo2.name }</li>
-							<li onClick={this.handleSubmit.bind(this, this.jsonDemo3)}>{ this.jsonDemo3.name }</li>
-							<li onClick={this.handleSubmit.bind(this, this.jsonDemo3)}>{ this.jsonDemo3.name }</li>
+							<li onClick={this.handleSubmit.bind(this, this.jsonDemo5)}>{ this.jsonDemo5.name }</li>
+							<li onClick={this.handleSubmit.bind(this, this.jsonDemo6)}>{ this.jsonDemo6.name }</li>
+							<li onClick={this.handleSubmit.bind(this, this.jsonDemo7)}>{ this.jsonDemo7.name }</li>
 						</ul>
 						<p id="name">{this.state.json.name}</p>
 						<p id="score-label">Overall quality score for this location</p>
@@ -222,8 +258,7 @@ export default class Home extends Component {
 	}
 
 	handleSubmit(json) {
-		this.calculateScore(this);
-		this.setState({ lat: json.ycord, lng: json.xcord, stage: 2, json: json }, () => {this.init(this);});
+		this.setState({ lat: json.ycord, lng: json.xcord, stage: 2, json: json }, () => {this.init(this); this.calculateScore(this);});
 		setTimeout(() => { this.setState({ stage: 3 }) }, 1200);
 	}
 
@@ -273,7 +308,7 @@ export default class Home extends Component {
 		} else if (scoreResult < 1) {
 			scoreResult = 1;
 		}
-		this.setState({ score:scoreResult });
+		this.setState({ score: scoreResult });
 	}
 
 	renderClassName() {
