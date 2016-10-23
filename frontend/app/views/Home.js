@@ -130,7 +130,70 @@ export default class Home extends Component {
 				<div id="section-2">
 					<h2>Use locata API service to improve your existing platform!</h2>
 					<p>Maecenas posuere risus quis sollicitudin hendrerit. Quisque a auctor turpis, id vulputate felis. Morbi vitae arcu massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In mollis elit non turpis elementum gravida. Mauris sit amet mollis tortor.</p>
-
+					<p><a href="mailto:info@locata.eu"><img src="/subscribe.png" alt="" width="700"/></a></p>
+					<ul className="subscribe">
+						<li>
+							<span className="inner">
+								<span className="title">
+									Full stack
+									<span>For the serius guys.</span>
+								</span>
+								<span className="content">
+									All locations.
+								</span>
+								<span className="content">
+									All 14 data categories.
+								</span>
+								<span className="price">
+									50€ a month
+								</span>
+								<span class="footer">
+									Contact us!
+								</span>
+							</span>
+						</li>
+						<li>
+							<span className="inner">
+								<span className="title">
+									More data
+									<span>For the enthusiasts! </span>
+								</span>
+								<span className="content">
+									Limited to one city.
+								</span>
+								<span className="content">
+									All 14 data categories.
+								</span>
+								<span className="price">
+									50€ a month
+								</span>
+								<span class="footer">
+									Contact us!
+								</span>
+							</span>
+						</li>
+						<li>
+							<span className="inner">
+								<span className="title">
+									Full stack
+									<span>For the serius guys</span>
+								</span>
+								<span className="content">
+									Limited to one city.
+								</span>
+								<span className="content">
+									Limited to 4 data categories.
+									<span>(up to you to choose)</span>
+								</span>
+								<span className="price">
+									50€ a month
+								</span>
+								<span class="footer">
+									Contact us!
+								</span>
+							</span>
+						</li>
+					</ul>
 			</div>
 			</div>
 		);
