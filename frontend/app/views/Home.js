@@ -266,14 +266,14 @@ export default class Home extends Component {
 		const weightSum = weightList.reduce((previousValue, currentValue) => {
 			return previousValue + currentValue;
 		}, 0);
+		let scoreResult = Math.floor(sumWithWeights / (weightSum * 0.65)) ;
 
-
-		console.log('sumWithWeights:  ', sumWithWeights);
-		console.log('weightSum: ', weightSum);
-
-		const scoreResult = sumWithWeights / (weightSum * 1.25) ;
-		console.log('NEW Score: ', scoreResult);
-		this.setState({ score: Math.floor(scoreResult) });
+		if (scoreResult > 10) {
+			scoreResult = 10;
+		} else if (scoreResult < 1) {
+			scoreResult = 1;
+		}
+		this.setState({ score:scoreResult });
 	}
 
 	renderClassName() {
