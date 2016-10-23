@@ -130,7 +130,7 @@ export default class Home extends Component {
 						<Isvg src="/Locata-logo.svg" />
 					</div>
 					<p id="wanna-go" onClick={() => {this.setState({ stage: 0, value: '' });}}><a>Wanna go again?</a></p>
-					<p className="text">We turn location based data to valuable information for everyone!</p>
+					<p className="text">We offer meaningful and valuable location based data via an API service.</p>
 					<div className={ this.renderClassName() }>
 						<form
 							className="formContent"
