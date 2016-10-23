@@ -13,6 +13,7 @@
     "eslint": "^2.10.2",
     "eslint-config-sl": "^1.2.0",
     "leaflet": "^0.7.7",
+    "nw-react-slider": "^2.0.1",
     "react": "^15.0.1",
     "react-autosuggest": "^7.0.1",
     "react-dom": "^15.0.1",

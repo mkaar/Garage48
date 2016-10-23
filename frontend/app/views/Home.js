@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Isvg from 'react-inlinesvg';
+import Slider from 'nw-react-slider';
 
 import { mapStyles } from '../holdMapStyles';
 export default class Home extends Component {
@@ -13,7 +14,8 @@ export default class Home extends Component {
 		kindergarten: 3,
 		bus: 8,
 		safety: 4,
-		wage: 10,
+		score: 7,
+
 	};
 
 	state = {
@@ -24,6 +26,12 @@ export default class Home extends Component {
 		stage: 0,
 		mapLoaded: false,
 		json: this.jsonDemo,
+		score: 5,
+		airW: 5,
+		schoolW: 5,
+		kindergartenW: 5,
+		busW: 5,
+		safetyW: 5,
 	};
 
 	jsonDemo1 = {
@@ -35,7 +43,7 @@ export default class Home extends Component {
 		kindergarten: 2,
 		bus: 7,
 		safety: 6,
-		wage: 8,
+		score: 5,
 	};
 
 	jsonDemo2 = {
@@ -47,7 +55,7 @@ export default class Home extends Component {
 		kindergarten: 3,
 		bus: 5,
 		safety: 8,
-		wage: 4,
+		score: 6,
 	};
 
 	jsonDemo3 = {
@@ -59,7 +67,7 @@ export default class Home extends Component {
 		kindergarten: 3,
 		bus: 10,
 		safety: 4,
-		wage: 10,
+		score: 8,
 	};
 
 	jsonDemo4 = {
@@ -71,7 +79,7 @@ export default class Home extends Component {
 		kindergarten: 7,
 		bus: 9,
 		safety: 8,
-		wage: 2,
+		score: 5,
 	};
 
 	listener = google.maps.event.addDomListener(window, 'load', this.init.bind(this));
@@ -112,14 +120,16 @@ export default class Home extends Component {
 						</ul>
 						<p id="name">{this.state.json.name}</p>
 						<p id="score-label">Overall quality score for this location</p>
-						<p id="score" className="score-7">7</p>
+						<p id="score" className={'score-'+this.state.score} >{ this.state.score }</p>
 						<ul className="data-results">
-							<li className={this.calcClassName(this.state.json.air)} >Air quality</li>
+							<li className={this.calcClassName(this.state.json.air)} >
+								Air quality
+								<Slider value={this.state.airW} min={0} max={10} onChange={ this.handleSliderChange.bind(this, 'air') }/>
+							</li>
 							<li className={this.calcClassName(this.state.json.school)} >Nearest school</li>
 							<li className={this.calcClassName(this.state.json.kindergarten)} >Nearest kindergarten</li>
 							<li className={this.calcClassName(this.state.json.bus)} >Nearest bus stop</li>
 							<li className={this.calcClassName(this.state.json.safety)} >Traffic safety</li>
-							<li className={this.calcClassName(this.state.json.wage)} >Average wage</li>
 						</ul>
 						<div className="pointer-tail">
 							<Isvg src="/pointer-tail.svg" />
@@ -145,8 +155,12 @@ export default class Home extends Component {
 	}
 
 	handleSubmit(json) {
-		this.setState({ lat: json.ycord, lng: json.xcord, stage: 2, json: json }, () => {this.init(this);});
+		this.setState({ lat: json.ycord, lng: json.xcord, stage: 2, json: json, score: json.score }, () => {this.init(this);});
 		setTimeout(() => { this.setState({ stage: 3 }) }, 1200);
+	}
+
+	handleSliderChange(name) {
+		this.setState({ airW	 :  3});
 	}
 
 	renderClassName() {
@@ -168,6 +182,41 @@ export default class Home extends Component {
 	}
 
 	calcClassName(score) {
+		switch (score) {
+			case 1:
+				return 'p10';
+				break;
+			case 2:
+				return 'p20';
+				break;
+			case 3:
+				return 'p30';
+				break;
+			case 4:
+				return 'p40';
+				break;
+			case 5:
+				return 'p50';
+				break;
+			case 6:
+				return 'p60';
+				break;
+			case 8:
+				return 'p80';
+				break;
+			case 9:
+				return 'p90';
+				break;
+			case 10:
+				return 'p100';
+				break;
+			default:
+				return 'p70';
+				break;
+		}
+	}
+
+	calcScoreClassName() {
 		switch (score) {
 			case 1:
 				return 'p10';
