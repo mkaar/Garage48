@@ -10,10 +10,10 @@ export default class Home extends Component {
 		xcord: '24.7451903462223',
 		ycord: '59.438599269995',
 		air: 5,
-		school: 7,
+		school: 9,
 		kindergarten: 3,
 		bus: 8,
-		safety: 4,
+		safety: 2,
 		score: 7,
 
 	};
@@ -300,14 +300,16 @@ export default class Home extends Component {
 
 		const weightSum = weightList.reduce((previousValue, currentValue) => {
 			return previousValue + currentValue;
-		}, 0);
-		let scoreResult = Math.floor(sumWithWeights / (weightSum * 0.65)) ;
+		}, 1);
+		let scoreResult = Math.round((sumWithWeights / weightSum) - 0.11) ;
 
+		console.log((sumWithWeights / weightSum) - 0.11);
 		if (scoreResult > 10) {
 			scoreResult = 10;
 		} else if (scoreResult < 1) {
 			scoreResult = 1;
 		}
+		console.log('summa ',scoreResult);
 		this.setState({ score: scoreResult });
 	}
 
