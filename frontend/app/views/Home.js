@@ -106,8 +106,13 @@ export default class Home extends Component {
 							<li onClick={this.handleSubmit.bind(this, this.jsonDemo2)}>{ this.jsonDemo2.name }</li>
 							<li onClick={this.handleSubmit.bind(this, this.jsonDemo3)}>{ this.jsonDemo3.name }</li>
 							<li onClick={this.handleSubmit.bind(this, this.jsonDemo4)}>{ this.jsonDemo4.name }</li>
+							<li onClick={this.handleSubmit.bind(this, this.jsonDemo2)}>{ this.jsonDemo2.name }</li>
+							<li onClick={this.handleSubmit.bind(this, this.jsonDemo3)}>{ this.jsonDemo3.name }</li>
+							<li onClick={this.handleSubmit.bind(this, this.jsonDemo3)}>{ this.jsonDemo3.name }</li>
 						</ul>
 						<p id="name">{this.state.json.name}</p>
+						<p id="score-label">Overall quality score for this location</p>
+						<p id="score" className="score-7">7</p>
 						<ul className="data-results">
 							<li className={this.calcClassName(this.state.json.air)} >Air quality</li>
 							<li className={this.calcClassName(this.state.json.school)} >Nearest school</li>
@@ -122,6 +127,11 @@ export default class Home extends Component {
 					</div>
 					<div className="map" id="map" />
 				</div>
+				<div id="section-2">
+					<h2>Use locata API service to improve your existing platform!</h2>
+					<p>Maecenas posuere risus quis sollicitudin hendrerit. Quisque a auctor turpis, id vulputate felis. Morbi vitae arcu massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In mollis elit non turpis elementum gravida. Mauris sit amet mollis tortor.</p>
+
+			</div>
 			</div>
 		);
 	}
