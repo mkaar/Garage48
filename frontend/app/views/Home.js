@@ -222,24 +222,58 @@ export default class Home extends Component {
 	}
 
 	handleSubmit(json) {
-		this.setState({ lat: json.ycord, lng: json.xcord, stage: 2, json: json, score: json.score }, () => {this.init(this);});
+		this.calculateScore(this);
+		this.setState({ lat: json.ycord, lng: json.xcord, stage: 2, json: json }, () => {this.init(this);});
 		setTimeout(() => { this.setState({ stage: 3 }) }, 1200);
 	}
 
 	handleAirChange(value, position) {
-		this.setState({ airW:  value});
+		this.setState({ airW:  value}, () => {
+			this.calculateScore(this);
+		});
 	}
 	handleSchoolChange(value, position) {
-		this.setState({ schoolW:  value});
+		this.setState({ schoolW:  value}, () => {
+			this.calculateScore(this);
+		});
 	}
 	handleKindergartenChange(value, position) {
-		this.setState({ kindergartenW:  value});
+		this.setState({ kindergartenW:  value}, () => {
+			this.calculateScore(this);
+		});
 	}
 	handleBusChange(value, position) {
-		this.setState({ busW:  value});
+		this.setState({ busW:  value}, () => {
+			this.calculateScore(this);
+		});
 	}
 	handleSafetyChange(value, position) {
-		this.setState({ safetyW:  value});
+		this.setState({ safetyW:  value}, () => {
+			this.calculateScore(this);
+		});
+	}
+
+	calculateScore() {
+		const stateNow = this.state;
+		const currentJson = stateNow.json;
+		const currentJsonList = [currentJson.air, currentJson.school, currentJson.kindergarten, currentJson.bus, currentJson.safety];
+		const weightList = [stateNow.airW, stateNow.schoolW, stateNow.kindergartenW, stateNow.busW, stateNow.safetyW];
+
+		const sumWithWeights = currentJsonList.reduce((previousValue, currentValue, currentIndex) => {
+			return previousValue + currentValue*weightList[currentIndex];
+		}, 0);
+
+		const weightSum = weightList.reduce((previousValue, currentValue) => {
+			return previousValue + currentValue;
+		}, 0);
+
+
+		console.log('sumWithWeights:  ', sumWithWeights);
+		console.log('weightSum: ', weightSum);
+
+		const scoreResult = sumWithWeights / (weightSum * 1.25) ;
+		console.log('NEW Score: ', scoreResult);
+		this.setState({ score: Math.floor(scoreResult) });
 	}
 
 	renderClassName() {
