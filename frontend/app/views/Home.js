@@ -124,12 +124,24 @@ export default class Home extends Component {
 						<ul className="data-results">
 							<li className={this.calcClassName(this.state.json.air)} >
 								Air quality
-								<Slider value={this.state.airW} min={0} max={10} onChange={ this.handleSliderChange.bind(this, 'air') }/>
+								<Slider value={this.state.airW} min={0} max={10} onChange={ this.handleAirChange.bind(this) }/>
 							</li>
-							<li className={this.calcClassName(this.state.json.school)} >Nearest school</li>
-							<li className={this.calcClassName(this.state.json.kindergarten)} >Nearest kindergarten</li>
-							<li className={this.calcClassName(this.state.json.bus)} >Nearest bus stop</li>
-							<li className={this.calcClassName(this.state.json.safety)} >Traffic safety</li>
+							<li className={this.calcClassName(this.state.json.school)} >
+								Nearest school
+								<Slider value={this.state.schoolW} min={0} max={10} onChange={ this.handleSchoolChange.bind(this) }/>
+							</li>
+							<li className={this.calcClassName(this.state.json.kindergarten)} >
+								Nearest kindergarten
+								<Slider value={this.state.kindergartenW} min={0} max={10} onChange={ this.handleKindergartenChange.bind(this) }/>
+							</li>
+							<li className={this.calcClassName(this.state.json.bus)} >
+								Nearest bus stop
+								<Slider value={this.state.busW} min={0} max={10} onChange={ this.handleBusChange.bind(this) }/>
+							</li>
+							<li className={this.calcClassName(this.state.json.safety)} >
+								Traffic safety
+								<Slider value={this.state.safetyW} min={0} max={10} onChange={ this.handleSafetyChange.bind(this) }/>
+							</li>
 						</ul>
 						<div className="pointer-tail">
 							<Isvg src="/pointer-tail.svg" />
@@ -222,8 +234,20 @@ export default class Home extends Component {
 		setTimeout(() => { this.setState({ stage: 3 }) }, 1200);
 	}
 
-	handleSliderChange(name) {
-		this.setState({ airW	 :  3});
+	handleAirChange(value, position) {
+		this.setState({ airW:  value});
+	}
+	handleSchoolChange(value, position) {
+		this.setState({ schoolW:  value});
+	}
+	handleKindergartenChange(value, position) {
+		this.setState({ kindergartenW:  value});
+	}
+	handleBusChange(value, position) {
+		this.setState({ busW:  value});
+	}
+	handleSafetyChange(value, position) {
+		this.setState({ safetyW:  value});
 	}
 
 	renderClassName() {
