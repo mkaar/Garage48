@@ -7,18 +7,29 @@ export default {
 	output: {
 		path: 'build',
 		filename: 'bundle.js',
+		publicPath: '/',
 	},
 	module: {
 		loaders: [
 			{
 				test: /\.js$/,
 				loader: 'babel-loader',
+				exclude: /node_modules/,
 				query: {
 					presets: ['react', 'es2015', 'stage-1'],
 				},
 			},
-			{ test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?sourceMap') },
-			{ test: /\.(eot|ttf|woff|woff2|svg)$/, loader: 'file' },
+			{
+				test: /\.less$/,
+				loader: ExtractTextPlugin.extract(
+					'css?sourceMap!less?sourceMap'
+				),
+				exclude: /node_modules/,
+			},
+			{
+				test: /\.(eot|ttf|woff|woff2|svg|png)$/,
+				loader: 'url-loader?limit=15000',
+				exclude: /node_modules/, },
 		],
 	},
 	plugins: [
