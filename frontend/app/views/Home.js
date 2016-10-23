@@ -121,6 +121,7 @@ export default class Home extends Component {
 						<p id="name">{this.state.json.name}</p>
 						<p id="score-label">Overall quality score for this location</p>
 						<p id="score" className={'score-'+this.state.score} >{ this.state.score }</p>
+						<p id="slider-hint">Hover over the bars to change weights</p>
 						<ul className="data-results">
 							<li className={this.calcClassName(this.state.json.air)} >
 								Air quality
