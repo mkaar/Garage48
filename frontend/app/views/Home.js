@@ -245,6 +245,7 @@ export default class Home extends Component {
 						</li>
 					</ul>
 			</div>
+			<p id="contact">info@locata.eu</p>
 			</div>
 		);
 	}
