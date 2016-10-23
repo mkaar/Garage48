@@ -167,9 +167,6 @@ export default class Home extends Component {
 								<span className="content">
 									All 14 data categories.
 								</span>
-								<span className="price">
-									50€ a month
-								</span>
 								<span className="footer">
 									Contact us!
 								</span>
@@ -186,9 +183,6 @@ export default class Home extends Component {
 								</span>
 								<span className="content">
 									All 14 data categories.
-								</span>
-								<span className="price">
-									50€ a month
 								</span>
 								<span className="footer">
 									Contact us!
@@ -207,9 +201,6 @@ export default class Home extends Component {
 								<span className="content">
 									Limited to 4 data categories.
 									<span>(up to you to choose)</span>
-								</span>
-								<span className="price">
-									50€ a month
 								</span>
 								<span className="footer">
 									Contact us!
